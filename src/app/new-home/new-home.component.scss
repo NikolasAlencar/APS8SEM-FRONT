@@ -1,0 +1,60 @@
+p {
+  font-family: Lato;
+}
+
+.container{
+  background-color: #3f51b5;
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+.pluviometria{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div{
+    margin: 10px;
+  }
+}
+
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loader{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  :nth-child(1){
+    font-weight: 600;
+    font-size: 16px
+  }
+}
+
+.subtitle{
+  font-size: 20px;
+  font-weight: 700;
+}

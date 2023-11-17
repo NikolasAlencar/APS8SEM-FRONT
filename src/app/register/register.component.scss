@@ -1,0 +1,47 @@
+mat-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(143, 143, 143, 0.274);
+}
+
+form{
+  border-radius: 0.3rem;
+}
+
+.criar-conta{
+  background-color: #3f51b5;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 0.3rem 0.3rem 0rem 0rem;
+}
+
+.error{
+  color: red
+}
+
+.addArquivo{
+  span{
+    margin-top: 5px;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    width: 100%;
+    background-color: #33333331;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+  }
+}

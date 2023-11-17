@@ -1,0 +1,15 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="over" [(opened)]="opened" #sidenav>
+    <app-sidenav (exit)="openOrClose($event)"></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content
+    ><app-header
+      *ngIf="header?.hasHeader"
+      (openedOrClosed)="openOrClose($event)"
+      [name]="header.name"
+    ></app-header>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<app-loading *ngIf="loading"></app-loading>

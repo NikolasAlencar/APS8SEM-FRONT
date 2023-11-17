@@ -1,0 +1,36 @@
+<owl-carousel-o *ngIf="mananciais$ | async as mananciais; else spinnerLoad" [options]="customOptions">
+  <ng-container *ngFor="let manancial of mananciais">
+    <ng-template carouselSlide [id]="manancial.SistemaId">
+      <div class="container">
+        <h1>{{ manancial.Nome }}</h1>
+        <p class="subtitle">Volume Armazenado</p>
+        <p>{{ manancial.VolumePorcentagemAR }}%</p>
+        <div class="body">
+          <p class="subtitle" style="margin-top: 10px;">Pluviometria</p>
+          <div class="pluviometria">
+            <div class="info">
+              <p>Dia</p>
+              <p>{{ manancial.PrecDia }}%</p>
+            </div>
+            <div class="info">
+              <p>Mês</p>
+              <p>{{ manancial.PrecMensal }}%</p>
+            </div>
+            <div class="info">
+              <p>Média Histórica</p>
+              <p>{{ manancial.PrecHist }}%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title"> -->
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
+
+<ng-template #spinnerLoad>
+  <mat-spinner class="loader"></mat-spinner>
+</ng-template>
+
+
+
