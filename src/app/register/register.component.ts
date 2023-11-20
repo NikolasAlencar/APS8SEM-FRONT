@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
   }
 
   voltarInicio() {
-    this.navigate.navegarParaInicio();
+    this.navigate.navegarParaLogin();
   }
 
   verificaErro(optionName: string) {

@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     this.authService
       .login(user).subscribe({
         next: () => {
-          this.navigate.navegarParaFeed();
+          this.navigate.navegarParaHome();
           this.loading = false;
         },
         error: () => {
