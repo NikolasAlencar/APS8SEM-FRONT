@@ -43,7 +43,7 @@ export class LastStepComponent implements OnInit {
         this.authService.saveUserInfo(token);
         this.gerenciaEstado.setUserData(userData);
         this.mensagemService.sucesso(`O usuário ${userData?.usuario} foi criado!`);
-        this.navigate.navegarParaFeed();
+        this.navigate.navegarParaHome();
       },
       error: () => this.erroService.trazerErro()
     })
