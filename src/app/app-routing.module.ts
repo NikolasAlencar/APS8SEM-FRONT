@@ -7,6 +7,7 @@ export const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
   {
     path: "home",
+    canActivate: [AuthorizationGuard],
     loadChildren: () => import("./new-home/new-home.module").then(m => m.NewHomeModule),
     data: {
       header: {
